@@ -15,5 +15,5 @@ The result is an over-segmented image. With the correct parameters, it can be us
 ![Duomo](output/duomo.jpg)
 ![Duoma](output/duomo-segmented.jpg)
 
-![tunnel](output/tunnel.jpg)
-![tunnel](output/tunnel-segmented.jpg)
+![tunnel](output/tunnel.png)
+![tunnel](output/tunnel-segmented.png)
