@@ -4,7 +4,7 @@ The program reads in an image, segments it using K-Means clustering and outputs 
 
 ```python imageSegmentation.py K inputImageFilename outputImageFilename```
 
-It is worth playing with the number of iterations, low numbers will run quicker but will produce worst results.
+It is worth playing with the number of iterations, low numbers will run quicker.
 
 The result is an over-segmented image. With the correct parameters, it can be used to partition an image for further processing. Here is an example of that: [Make3D](http://make3d.cs.cornell.edu/index.html)
 
