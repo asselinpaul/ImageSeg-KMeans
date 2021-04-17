@@ -2,7 +2,9 @@
 
 The program reads in an image, segments it using K-Means clustering and outputs the segmented image.
 
-```python imageSegmentation.py K inputImageFilename outputImageFilename```
+```python imageSegmentation.py K inputImageFilename outputImageFilename iterations```
+
+**example:** ```python imageSegmentation.py 3 output/tshirt.ppm output/tshirt_segmented.ppm  10```
 
 It is worth playing with the number of iterations, low numbers will run quicker.
 
@@ -17,3 +19,13 @@ The result is an over-segmented image. With the correct parameters, it can be us
 
 ![tunnel](output/tunnel.png)
 ![tunnel](output/tunnel-segmented.png)
+
+_cv2 is used only to accept image file of types .ppm an .pgm which are not supported by Image.open(inputName), whereas **Logic behind kmeans is written in python and no library has been used.**_
+
+If you wish you can still use ```image = Image.open(inputName)``` instead of 
+```
+image = cv2.imread(inputName)
+image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+image = Image.fromarray(image)
+```
+if you are not using .ppm and .pgm and only using .jpg
